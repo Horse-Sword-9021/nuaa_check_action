@@ -192,7 +192,7 @@ def check(cookies, geo_api_info, id, uid):
 
             if response.text.find('成功') >= 0:
                 print('打卡成功')
-                return True, '打卡成功，点个赞👍！' + '\n'
+                return True, '打卡成功，嗯……🐂，来自9021的肯定，点个赞吧👍！' + '\n'
             else:
                 print('打卡失败')
         except:
