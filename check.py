@@ -9,8 +9,8 @@ import requests
 from send_mail import send_mail
 # from requests_toolbelt.utils import dump
 
-try_times = 1   # 失败这么多次后就直接不管了
-delay = 2   # 访问页面前的延迟，为了防止过快访问网站被封IP
+try_times = 4   # 失败这么多次后就直接不管了
+delay = 4   # 访问页面前的延迟，为了防止过快访问网站被封IP
 
 
 # 登陆并且返回json形式的cookie，如果登陆失败返回空串
@@ -206,10 +206,10 @@ def send_result(config, recever, result, messgae):
     smtp_host = config['smtp_host']
     if result == True:
         send_mail(mail_sender, smtp_password, smtp_host,
-                  recever, messgae, '打卡成功', '主人', '打卡姬')
+                  recever, messgae, '打卡成功', '点个赞👍', '9021')
     else:
         send_mail(mail_sender, smtp_password, smtp_host,
-                  recever, messgae, '打卡失败', '主人', '打卡姬')
+                  recever, messgae, '打卡失败', '今天出Bug了，手动打卡吧，别忘啦！', '9021')
 
 def main():
     config = sys.stdin.read()
