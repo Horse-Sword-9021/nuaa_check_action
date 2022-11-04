@@ -10,7 +10,7 @@ from send_mail import send_mail
 # from requests_toolbelt.utils import dump
 
 try_times = 4   # 失败这么多次后就直接不管了
-delay = 4   # 访问页面前的延迟，为了防止过快访问网站被封IP
+delay = 2   # 访问页面前的延迟，为了防止过快访问网站被封IP
 
 
 # 登陆并且返回json形式的cookie，如果登陆失败返回空串
