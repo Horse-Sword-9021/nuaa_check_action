@@ -192,7 +192,7 @@ def check(cookies, geo_api_info, id, uid):
 
             if response.text.find('成功') >= 0:
                 print('打卡成功')
-                return True, '打卡成功' + '\n'
+                return True, '打卡成功，点个赞👍！' + '\n'
             else:
                 print('打卡失败')
         except:
@@ -233,7 +233,7 @@ def main():
             message += message1 + message2
         except:
             print('发生错误，可能原因是打卡密码错误或者经纬度错误')
-            message += '发生错误，可能原因是打卡密码错误或者经纬度错误'
+            message += '如果你没改密码，那就是今天出Bug了，手动打卡吧，别忘啦！~'
         if mail != '':
             send_result(config, mail, result, message)
 
