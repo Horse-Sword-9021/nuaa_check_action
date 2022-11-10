@@ -4,7 +4,7 @@ on:
   push:
   schedule:
   # 16+8=24
-  - cron: '38 22 * * *' 
+  - cron: '03 22 * * *' 
 
 jobs:
   bot:
